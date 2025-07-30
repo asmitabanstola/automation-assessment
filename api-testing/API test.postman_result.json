@@ -1,0 +1,201 @@
+{
+	"id": "c9156229-fc45-4bfe-9351-cf7b90e91965",
+	"name": "API test",
+	"timestamp": "2025-07-29T16:15:24.884Z",
+	"collection_id": "20475312-4d769443-50a7-4cdd-b6a6-22a03f0dde16",
+	"folder_id": 0,
+	"environment_id": "20475312-07f8dcaa-0a32-469b-8a02-e30a5c9b5c02",
+	"totalPass": 9,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-07-29T16:15:22.602Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "b57b6840-40e0-46f2-a1bd-e31585443abf",
+			"name": "login",
+			"url": "https://restful-booker.herokuapp.com/auth",
+			"time": 323,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Login successful and token received": true
+			},
+			"testPassFailCounts": {
+				"Login successful and token received": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				323
+			],
+			"allTests": [
+				{
+					"Login successful and token received": true
+				}
+			]
+		},
+		{
+			"id": "bea0db90-3de7-4b8a-847b-1fd403f9be85",
+			"name": "getBookingId",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 648,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response is an array": true,
+				"Each item has a bookingid": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Each item has a bookingid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				648
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response is an array": true,
+					"Each item has a bookingid": true
+				}
+			]
+		},
+		{
+			"id": "970154fd-35db-46bc-9e58-ad7dd97ac214",
+			"name": "createbooking",
+			"url": "https://restful-booker.herokuapp.com/booking",
+			"time": 324,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate booking details": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate booking details": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				324
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate booking details": true
+				}
+			]
+		},
+		{
+			"id": "bd99bca7-a42e-4b5d-ac99-c4841030c6f4",
+			"name": "updatedetails",
+			"url": "https://restful-booker.herokuapp.com/booking/2097",
+			"time": 324,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate updated booking details": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate updated booking details": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				324
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate updated booking details": true
+				}
+			]
+		},
+		{
+			"id": "c79e7d60-3044-4c24-996d-288422743841",
+			"name": "deletebooking",
+			"url": "https://restful-booker.herokuapp.com/booking/2097",
+			"time": 322,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Successfully deleted": true
+			},
+			"testPassFailCounts": {
+				"Successfully deleted": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				322
+			],
+			"allTests": [
+				{
+					"Successfully deleted": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1941,
+	"collection": {
+		"requests": [
+			{
+				"id": "b57b6840-40e0-46f2-a1bd-e31585443abf",
+				"method": "POST"
+			},
+			{
+				"id": "bea0db90-3de7-4b8a-847b-1fd403f9be85",
+				"method": "GET"
+			},
+			{
+				"id": "970154fd-35db-46bc-9e58-ad7dd97ac214",
+				"method": "POST"
+			},
+			{
+				"id": "bd99bca7-a42e-4b5d-ac99-c4841030c6f4",
+				"method": "PATCH"
+			},
+			{
+				"id": "c79e7d60-3044-4c24-996d-288422743841",
+				"method": "DELETE"
+			}
+		]
+	}
+}

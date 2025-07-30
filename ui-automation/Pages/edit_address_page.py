@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 class Editaddress:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 15)
+        self.wait = WebDriverWait(driver, 20)
 
         # Locators — update these as per your app's real HTML
         self.profile_menu = (By.ID, "myAccountTrigger")  # button/menu to open address options
@@ -36,7 +36,7 @@ class Editaddress:
     def update_address(self):
         landmark_field = self.wait.until(EC.visibility_of_element_located(self.landmark))
         landmark_field.clear()
-        landmark_field.send_keys("Near Metro Market")
+        landmark_field.send_keys("Near Shantinagar chowk")
         save_click = self.wait.until(EC.element_to_be_clickable(self.save))
         save_click.click()
 
